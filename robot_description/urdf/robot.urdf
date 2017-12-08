@@ -1,0 +1,258 @@
+<robot
+  name="robot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.01464 0.056276 -0.057595"
+        rpy="0 0 0" />
+      <mass
+        value="89.879" />
+      <inertia
+        ixx="0.88184"
+        ixy="-0.044374"
+        ixz="0.17554"
+        iyy="0.62819"
+        iyz="0.071623"
+        izz="0.88869" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7451 0.7451 0.7451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/col/base_link_col.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="f_w">
+    <inertial>
+      <origin
+        xyz="0.00945772893911956 -0.00334889455904991 -0.000507014875773426"
+        rpy="0 0 0" />
+      <mass
+        value="22.387536417479" />
+      <inertia
+        ixx="0.174741629269512"
+        ixy="-4.98270226063284E-08"
+        ixz="-8.20321475979016E-05"
+        iyy="0.349454973842889"
+        iyz="-5.00298546466666E-08"
+        izz="0.174713344748168" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/col/wheel_col.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fw_j"
+    type="continuous">
+    <origin
+      xyz="0.696361690655976 -0.00167222952626456 -0.172786214381056"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="f_w" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="bl_w">
+    <inertial>
+      <origin
+        xyz="0.00947628863607464 -0.00328917887504476 -0.000511991377220355"
+        rpy="0 0 0" />
+      <mass
+        value="22.3875364180298" />
+      <inertia
+        ixx="0.174741629276058"
+        ixy="-4.98254153360211E-08"
+        ixz="-8.20321367738699E-05"
+        iyy="0.349454973860558"
+        iyz="-5.00323794947616E-08"
+        izz="0.174713344759291" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/col/wheel_col.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="blw_j"
+    type="continuous">
+    <origin
+      xyz="-0.71365773044936 0.518288399106205 -0.172781237876806"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bl_w" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="br_w">
+    <inertial>
+      <origin
+        xyz="0.00949640583819777 -0.00335721784492721 -0.000490047283352779"
+        rpy="0 0 0" />
+      <mass
+        value="22.3875364174756" />
+      <inertia
+        ixx="0.174741629269472"
+        ixy="-4.98270226830812E-08"
+        ixz="-8.20321475777519E-05"
+        iyy="0.349454973842874"
+        iyz="-5.00298541986911E-08"
+        izz="0.174713344748193" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/col/wheel_col.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brw_j"
+    type="continuous">
+    <origin
+      xyz="-0.71368 -0.51167 -0.1728"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="br_w" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sensor">
+    <inertial>
+      <origin
+        xyz="0 -5.66602320617449E-13 -6.35782892999259E-09"
+        rpy="0 0 0" />
+      <mass
+        value="24.428298979339" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/sensor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/sensor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="s_J"
+    type="fixed">
+    <origin
+      xyz="-0.11084 0 0.12171"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sensor" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      effort="0"
+      velocity="1" />
+  </joint>
+</robot>
